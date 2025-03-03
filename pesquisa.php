@@ -105,14 +105,14 @@ include "conexao.php";
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form method="POST" action="excluir_script.php">
-            <p>Deseja realmente excluir <b id="nome_pessoa"> Nome da pessoa</b>?</p>
+          <p>Deseja realmente excluir <b id="nome_pessoa"> Nome da pessoa</b>?</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-          <input type="hidden" nome="id" id="cod_pessoa" value="">
-          <input type="hidden" nome="nome" id="nome_pessoa_1" value="">
-          <input type="submit" class="btn btn-danger" value="Sim">
+          <form method="GET" action="excluir_script.php">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+            <input type="hidden" name="id" id="cod_pessoa" value="">
+            <input type="hidden" name="nome" id="nome_pessoa_1" value="">
+            <input type="submit" class="btn btn-danger" value="Sim">
           </form>
         </div>
       </div>
@@ -123,7 +123,7 @@ include "conexao.php";
     function pegar_dados(id, nome) {
       document.getElementById('nome_pessoa').innerHTML = nome;
       document.getElementById('nome_pessoa_1').value = nome;
-      document.getElementById('nome_pessoa').value = id;
+      document.getElementById('cod_pessoa').value = id;
     }
   </script>
 

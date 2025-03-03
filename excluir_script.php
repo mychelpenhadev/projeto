@@ -16,8 +16,8 @@
     <div class="row">
       <?php
       include "conexao.php";
-      $id = $_POST['id'];
-      $nome = $_POST['nome'];
+      $id = $_GET['id'];
+      $nome = $_GET['nome'];
 
       $sql = "DELETE FROM `pessoas` WHERE cod_pessoa = $id";
       if (mysqli_query($conn, $sql)) {
