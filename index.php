@@ -2,28 +2,28 @@
 include('./conexao.php');
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Empresa</title>
 </head>
 
 <body>
-    <div class="container">
+    <?php include('navbar.php');
+    ?>
+    <div class="containermt-4">
         <div class="row">
-            <div class="col">
-                <div class+"jumbotron">
+            <div class="col-md-12">
+                <div class="card-header">
                     <h1 class="display-4">Cadastro Web</h1>
                     <p>Este é um sistema simplificado de cadastro. Base de estudos para criação de sistemas Web com PHP e MySQL</p>
                     <p>Acesse as funções</p>
-                    <a class="btn btn-primary btn-lg" href="cadastro.php" role="button">Cadastro</a>
-                    <a class="btn btn-primary btn-lg" href="pesquisa.php" role="button">Pesquisa</a>
+                    <a href="cadastro.php" class="btn btn-primary">Cadastro</a>
+                    <a href="pesquisa.php" class="btn btn-secondary ">Pesquisa</a>
                 </div>
             </div>
 
@@ -32,7 +32,6 @@ include('./conexao.php');
     </div>
 
 
-    <!-- jQuery first, then Popper.js, then Bootstrap 35-->
     <script
         src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
         integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
